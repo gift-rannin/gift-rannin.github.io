@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Spesial Untukmu ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Dekorasi hati -->
+        <div class="heart heart-1">❤️</div>
+        <div class="heart heart-2">❤️</div>
+        <div class="heart heart-3">❤️</div>
+        
+        <!-- Tahap 1: Pertanyaan Valentine -->
+        <div id="step1" class="step active">
+            <h1 class="title">Haloo Dutttt! ❤️</h1>
+            <p class="subtitle">Mau ngerayain bareng aku gaa?</p>
+            
+            <div class="image-container">
+                <!-- CATATAN: Ganti dengan foto kalian berdua -->
+                <!-- Simpan foto dengan nama: foto-kita.jpg di folder images -->
+                <img src="images/val.jpeg" alt="Foto Kita Berdua" class="valentine-image" id="mainPhoto">
+                <div class="photo-hint">
+                    <i class="fas fa-heart"></i> Happy Valentine's Day Sayangg
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button id="yesBtn" class="btn yes-btn">Iyaa dongg! ❤️</button>
+                <button id="noBtn" class="btn no-btn">Nggaakkk</button>
+            </div>
+            
+            <p class="hint">Pilih yaa sayanggg 😉</p>
+        </div>
+        
+        <!-- Tahap 2: Mini Games -->
+        <div id="step2" class="step">
+            <h1 class="title">Yey! 🎉</h1>
+            <p class="subtitle">Main Game Duluu Duttt!</p>
+            <p class="instruction">Tangkap hati sebanyak mungkin dalam 10 detik!</p>
+            
+            <div class="game-container">
+                <div class="game-info">
+                    <div class="score">Skor: <span id="score">0</span></div>
+                    <div class="timer">Waktu: <span id="timer">10</span>s</div>
+                </div>
+                
+                <div id="gameArea" class="game-area">
+                    <!-- Hati akan muncul di sini secara dinamis -->
+                </div>
+                
+                <button id="startGameBtn" class="btn game-btn">Mulai Game!</button>
+                
+                <!-- Pesan hasil game -->
+                <div id="gameResult" class="game-result" style="display: none;">
+                    <h3 id="resultTitle">Game Selesai!</h3>
+                    <p id="resultMessage">Skor kamu: <span id="finalScore">0</span></p>
+                    <p id="resultComment"></p>
+                    <p class="auto-proceed">Hebat kamu duttt... <span id="countdown">3</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tahap 3: Gift / Hadiah (Foto dan Pesan) -->
+        <div id="step3" class="step">
+            <!-- Musik akan otomatis diputar di step ini -->
+            <audio id="valentineMusic" loop autoplay>
+                <!-- CATATAN: Ganti dengan lagu favorit kalian -->
+                <!-- Simpan lagu dengan nama: lagu-kita.mp3 di folder music -->
+                <source src="music/music.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+            
+            <h1 class="title">Ada hadiah nihhh 💝</h1>
+            <p class="subtitle">Ehhhh ada apa nihh dutt...</p>
+            
+            <!-- Gift Box Animation -->
+            <div class="gift-box" id="giftBox">
+                <div class="gift-lid">
+                    <div class="gift-bow">🎀</div>
+                </div>
+                <div class="gift-body">
+                    <span class="gift-text">Klik yaaaa!</span>
+                </div>
+            </div>
+            
+            <!-- Gift Content (akan ditampilkan setelah gift dibuka) -->
+            <div id="giftContent" class="gift-content" style="display: none;">
+                <!-- Galeri Foto -->
+                <div class="gallery-section">
+                    <h2 class="section-title">Foto foto kitaa 📸</h2>
+                    <div class="gallery-container">
+                        <!-- CATATAN: Ganti dengan foto-foto kalian -->
+                        <!-- Simpan foto dengan nama: kenangan1.jpg, kenangan2.jpg, dst di folder images -->
+                        <div class="photo-frame">
+                            <img src="images/firstmet.jpeg" alt="Kenangan 1" class="gallery-photo">
+                            <div class="photo-caption">Ini pertama kali kita ketemuu, ingett gaaa? ❤️</div>
+                        </div>
+                        
+                        <div class="photo-frame">
+                            <img src="images/same.jpeg" alt="Kenangan 2" class="gallery-photo">
+                            <div class="photo-caption">Kalo ini yang kamu nempel bangett di motor 😊</div>
+                        </div>
+                        
+                        <div class="photo-frame">
+                            <img src="images/good.jpeg" alt="Kenangan 3" class="gallery-photo">
+                            <div class="photo-caption">Ini kayanya foto kita yang paling bagus dehhh ✨</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pesan-pesan -->
+                <div class="messages-section">
+                    <h2 class="section-title">Pesan Dari Hatiku 💌</h2>
+                    
+                    <div class="messages-container">
+                        <!-- CATATAN: Ganti pesan-pesan ini dengan kata-kata dari hatimu -->
+                        <div class="message-card">
+                            <div class="message-icon">💕</div>
+                            <div class="message-content">
+                                <h3>Buat Nanay nduttt</h3>
+                                <p>Makasihhh yaa udah nerima aku apa adanyaa, makasihh udah ngertiin aku bangett, makasihhh udah sabar banget sama akuuu sama makasih juga udah nonton live dava hehe.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-card">
+                            <div class="message-icon">😊</div>
+                            <div class="message-content">
+                                <h3>Nduttt</h3>
+                                <p>Inget gaa yang aku ngeluh keseringan telfonan? aku nyesel ngomong gitu ke kamu dutt, apalagi setelah denger kabar itu dari kamu:(</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-card">
+                            <div class="message-icon">🌹</div>
+                            <div class="message-content">
+                                <h3>Cinta Yang Tumbuh</h3>
+                                <p>Sekaranggg kayanya aku udah kecintaan banget dehh sama kamuuu, bawaannya kangenn terusss tauuu😊</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-card">
+                            <div class="message-icon">💖</div>
+                            <div class="message-content">
+                                <h3>Rumah dan Pelukan</h3>
+                                <p>Sejak sama kamu, aku kaya ketemu rumah baruku. Pas kita pelukan aku ngerasa tenang dan senang. Kamu tuhh tempat ternyaman bagi akuuu.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="message-card">
+                            <div class="message-icon">🎁</div>
+                            <div class="message-content">
+                                <h3>Hadiah Terindah</h3>
+                                <p>Kamu adalah hadiah yang paling berharga yang pernah Allah kasih ke akuu. Ga ada yang bisa nandingin bahagianya kalo aku udah sama kamuu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pesan Penutup -->
+                <div class="final-message">
+                    <h2 class="final-title">Terima kasih sudah menjadi Valentine aku! 💘</h2>
+                    <p class="closing-message">Love youu duttt. Semoga hadiah sederhana ini bisa bikin kamu tersenyum seperti kamu selalu membuatku tersenyum.</p>
+                    <p class="signature">I Love You in Every Universe,<br><span class="name">Nayla Anindya Putri</span></p>
+                    <button id="restartBtn" class="btn restart-btn">Lihat Lagi dari Awal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
